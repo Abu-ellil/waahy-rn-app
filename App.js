@@ -1,21 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import MainContainer from './navigation/MainContainer';
+// App.js
+import { StatusBar } from "expo-status-bar";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import MainContainer from "./navigation/MainContainer";
+import { UserProvider } from "./context/userContext";
 
 export default function App() {
   return (
-  <SafeAreaView style={styles.container}>
-  
-   <MainContainer/>
-
-  </SafeAreaView>
+    <SafeAreaView style={styles.container}>
+      <UserProvider>
+        <MainContainer />
+      </UserProvider>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    justifyContent: "center",
   },
 });

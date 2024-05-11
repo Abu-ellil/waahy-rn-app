@@ -11,6 +11,7 @@ import Settinges from "./screens/Settinges";
 
 //Screen names
 const homePage = "Home";
+const postsPage = "Posts";
 const profile = "Profile";
 const settingsName = "Settings";
 
